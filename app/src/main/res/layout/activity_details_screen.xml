@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.detailsScreen.DetailsScreenActivity">
+
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:theme="@style/Theme.Details"
+       android:background="@color/purple_500"
+       android:layout_height="?android:attr/actionBarSize" />
+   <ImageView
+       android:id="@+id/movieImage"
+       android:layout_width="match_parent"
+       android:scaleType="fitXY"
+       android:layout_height="200dp"
+       android:layout_margin="10dp"></ImageView>
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
+   <TextView
+       android:textStyle="bold"
+       android:layout_width="wrap_content"
+       android:layout_height="40dp"
+       android:text="Release Date :"></TextView>
+   <TextView
+       android:id="@+id/releaseDate"
+       android:layout_width="wrap_content"
+       android:layout_height="40dp"></TextView>
+
+</LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:orientation="horizontal">
+      <TextView
+         android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:text="Duration : "></TextView>
+      <TextView
+          android:id="@+id/duration"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"></TextView>
+   </LinearLayout>
+   <LinearLayout
+       android:layout_margin="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+      <TextView
+android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:text="Genre : "></TextView>
+      <TextView
+          android:id="@+id/genre"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"></TextView>
+   </LinearLayout>
+
+
+   <LinearLayout
+       android:layout_margin="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+      <TextView
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:text="Director : "></TextView>
+      <TextView
+          android:id="@+id/director"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"></TextView>
+   </LinearLayout>
+   <LinearLayout
+       android:layout_margin="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+      <TextView
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Plot : "></TextView>
+      <TextView
+          android:id="@+id/plot"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"></TextView>
+   </LinearLayout>
+   <LinearLayout
+       android:layout_margin="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+      <TextView
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Cast : "></TextView>
+      <TextView
+          android:id="@+id/cast"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"></TextView>
+   </LinearLayout>
+
+</LinearLayout>
