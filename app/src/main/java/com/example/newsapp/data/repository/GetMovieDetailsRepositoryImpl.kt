@@ -15,8 +15,10 @@ class GetMovieDetailsRepositoryImpl(private val networkInterface: NetworkInterfa
             emit(Response.Loading())
             val data=networkInterface.getMovieDetails(Constants.apiKey,movieId = movieId)
             Log.d("data",data.toString())
-            if(data.errorMessage.isNullOrEmpty())
+            if(data.errorMessage.isNullOrEmpty()) {
                 emit(Response.Success(data = data))
+                Log.d("Data",data.toString())
+            }
             else
                 emit(Response.Failure(data.errorMessage))
 

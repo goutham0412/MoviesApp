@@ -48,21 +48,21 @@ class DetailsScreenActivity : AppCompatActivity() {
         }
         lifecycleScope.launch {
 
-//            repeatOnLifecycle(Lifecycle.State.STARTED)
-            Log.d("details---",detailsScreenViewModel.movieDetails.value.toString())
-                detailsScreenViewModel.movieDetails.collect{details->
+            repeatOnLifecycle(Lifecycle.State.STARTED)
+            {
+//            Log.d("details---",detailsScreenViewModel.movieDetails.value.toString())
+                detailsScreenViewModel.movieDetails.collect { details ->
 
-                    if(details.loading){
+                    if (details.loading) {
 
-                    }
-                    else{
+                    } else {
                         details.movieDetails?.let {
                             setMovieData(it)
                         }
                     }
                 }
 
-
+            }
         }
 
 
@@ -77,5 +77,10 @@ class DetailsScreenActivity : AppCompatActivity() {
         binding?.plot?.text=movieDetails.plot
         binding?.director?.text=movieDetails.directors
         binding?.cast?.text=movieDetails.stars
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding=null
     }
 }
